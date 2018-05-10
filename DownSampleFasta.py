@@ -59,7 +59,7 @@ print("THE USED CUTOFF WAS: {}".format( int(Cutoff )), file = sys.stderr)
 
 towrite = perkeys.intersection(kbkeys)
 
-for key in towrite:
+for key in sorted(towrite):
 	SeqIO.write(reads_dict[key], args.outfasta, "fasta")
 
 
