@@ -5,7 +5,8 @@ import sys
 parser = argparse.ArgumentParser(description="")
 parser.add_argument('-i', '--infasta', type=argparse.FileType('r'), default=sys.stdin)
 parser.add_argument('-o','--outfasta', type=argparse.FileType('w'), default=sys.stdout)
-parser.add_argument("--perCutoff", help="percentile cutoff, an input of 90 would return the top 10 of reads", default=None )
+parser.add_argument("--perCutoff", 
+		help="percentile cutoff, an input of 90 would return the top 10 percentile of reads", default=None )
 parser.add_argument("--kbCutoff", type = float, default = None, help="kb cutoff only use reads of length [input] kb and greater")
 args = parser.parse_args()
 
